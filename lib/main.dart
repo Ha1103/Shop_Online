@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shoponline/screens/signup_screens.dart';
+import 'package:shoponline/screens/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.orange,
         ),
       ),
-      home: Signup(),
+      home: Login(),
     );
   }
 }
