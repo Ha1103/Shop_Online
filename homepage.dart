@@ -47,7 +47,6 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-  
 
   final GlobalKey<ScaffoldState> _key = GlobalKey<ScaffoldState>();
   @override
@@ -93,7 +92,7 @@ class HomePage extends StatelessWidget {
         width: double.infinity,
         margin: EdgeInsets.symmetric(horizontal: 20),
         child: ListView(
-          children:<Widget> [
+          children: <Widget>[
             Column(
               children: <Widget>[
                 Container(
@@ -107,8 +106,7 @@ class HomePage extends StatelessWidget {
                               prefixIcon: Icon(Icons.search),
                               hintText: 'Search Something',
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(30)))
-                                  ),
+                                  borderRadius: BorderRadius.circular(30)))),
                       Container(
                         height: 50,
                         child: Column(
@@ -120,12 +118,14 @@ class HomePage extends StatelessWidget {
                                 Text(
                                   'Featured',
                                   style: TextStyle(
-                                      fontSize: 17, fontWeight: FontWeight.bold),
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold),
                                 ),
                                 Text(
                                   'See all',
                                   style: TextStyle(
-                                      fontSize: 17, fontWeight: FontWeight.bold),
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ],
                             ),
@@ -143,14 +143,14 @@ class HomePage extends StatelessWidget {
                         Row(
                           children: <Widget>[
                             _buildFeaturedProduct(
-                              image: 'product_1.png',
-                              name: 'Man Long T-Shirt',
-                              price: 30.0,
+                              'Man Long T-Shirt 1',
+                              30.0,
+                              'images/product_1.png',
                             ),
                             _buildFeaturedProduct(
-                              image: 'product_1.png',
-                              name: 'Man Long T-Shirt',
-                              price: 30.0,
+                              'Man Long T-Shirt 2',
+                              35.0,
+                              'images/product_2.png',
                             ),
                           ],
                         ),
@@ -177,15 +177,25 @@ class HomePage extends StatelessWidget {
                           child: Row(
                             children: <Widget>[
                               _buildCategoryProduct(
-                                  image: "product_1.png", color: ""),
+                                "product_1.png",
+                                Colors.red.value,
+                              ),
                               _buildCategoryProduct(
-                                  image: "product_1.png", color: ""),
+                                "product_2.png",
+                                Colors.blue.value,
+                              ),
                               _buildCategoryProduct(
-                                  image: "product_1.png", color: ""),
+                                "product_3.png",
+                                Colors.green.value,
+                              ),
                               _buildCategoryProduct(
-                                  image: "product_1.png", color: ""),
+                                "product_4.png",
+                                Colors.yellow.value,
+                              ),
                               _buildCategoryProduct(
-                                  image: "product_1.png", color: ""),
+                                "product_5.png",
+                                Colors.orange.value,
+                              ),
                             ],
                           ),
                         ),
@@ -195,17 +205,20 @@ class HomePage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: <Widget>[
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     'New Achieves',
                                     style: TextStyle(
-                                        fontSize: 17, fontWeight: FontWeight.bold),
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.bold),
                                   ),
                                   Text(
                                     'See all',
                                     style: TextStyle(
-                                        fontSize: 17, fontWeight: FontWeight.bold),
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.bold),
                                   ),
                                 ],
                               ),
@@ -213,28 +226,28 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         Row(
-                      children: <Widget>[
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Row(
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                _buildFeaturedProduct(
-                                  image: 'product_1.png',
-                                  name: 'Man Long T-Shirt',
-                                  price: 30.0,
-                                ),
-                                _buildFeaturedProduct(
-                                  image: 'product_1.png',
-                                  name: 'Man Long T-Shirt',
-                                  price: 30.0,
+                                Row(
+                                  children: <Widget>[
+                                    _buildFeaturedProduct(
+                                      'Man Long T-Shirt 1',
+                                      30.0,
+                                      'images/product_1.png',
+                                    ),
+                                    _buildFeaturedProduct(
+                                      'Man Long T-Shirt 2',
+                                      35.0,
+                                      'images/product_2.png',
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
                           ],
                         ),
-                      ],
-                    ),
                       ],
                     ),
                   ],
